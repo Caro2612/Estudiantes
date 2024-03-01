@@ -1,25 +1,21 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-
 public class Estudiantes{
     //Definición de la clase Estudiante
     static class Estudiante{
         private int identf;
         private String nomb;
         private String correo;
-
         //Constructor de la clase Estudiante 
         public Estudiante(int identf, String nomb, String correo){
             this.identf = identf;
             this.nomb = nomb;
             this.correo = correo;
         }
-
         //Método para obtener los atributos del estudiante  
         public int getIdentf(){
             return identf;
         }
-
         public String getNomb(){
             return nomb;
         }
@@ -108,7 +104,7 @@ public class Estudiantes{
         }
 
         //Imprime el listado actualizado de los estudiantes 
-        System.out.println("\nListado actualizado de estudiantes:");
+        System.out.println("\nLista actualizada de estudiantes:");
         for (Estudiante estudiante : listaDeEstudiantes){
             estudiante.imprimirEstudiante();
             System.out.println();
