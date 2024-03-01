@@ -43,7 +43,7 @@ public class Estudiantes{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Estudiante> listaDeEstudiantes = new ArrayList<>();
+        ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
         System.out.print("Ingrese el número de estudiantes a cargar: ");
         int n = scanner.nextInt();
 
@@ -63,8 +63,8 @@ public class Estudiantes{
 
         //Imprimir la lista original de los estudiantes
         System.out.println("\nLista de los estudiantes:");
-         for (Estudiante estudiante : listaDeEstudiantes){
-         estudiante.imprimirDeEstudiante();
+         for (Estudiante estudiante : listaEstudiantes){
+         estudiante.imprimirEstudiante();
          System.out.println();
         }
 
@@ -72,7 +72,7 @@ public class Estudiantes{
         System.out.print("Ingrese el número de identificación del estudiante a consultar: ");
         int identfConsulta = scanner.nextInt();
         boolean encontrado = false;
-        for (Estudiante estudiante : listaDeEstudiantes){
+        for (Estudiante estudiante : listaEstudiantes){
             if (estudiante.getIdentf() == identfConsulta) {
                 System.out.println("\nDatos del estudiante encontrado:");
                 estudiante.imprimirEstudiante();
@@ -88,7 +88,7 @@ public class Estudiantes{
         //Actualización de la identificación y el nombre
         System.out.print("\nIngrese el número de identificación del estudiante a actualizar: ");
         int identfActualizar = scanner.nextInt();
-        for (Estudiante estudiante : listaDeEstudiantes){
+        for (Estudiante estudiante : listaEstudiantes){
             if (estudiante.getIdentf() == identfActualizar) {
                 scanner.nextLine(); 
                 System.out.print("Ingrese el nombre actualizado o el nuevo nombre: ");
@@ -105,7 +105,7 @@ public class Estudiantes{
 
         //Imprime el listado actualizado de los estudiantes 
         System.out.println("\nLista actualizada de estudiantes:");
-        for (Estudiante estudiante : listaDeEstudiantes){
+        for (Estudiante estudiante : listaEstudiantes){
             estudiante.imprimirEstudiante();
             System.out.println();
         }
